@@ -6,8 +6,8 @@
     /*
         EDIT BELOW
      */
-    $to_Email       = "example123@example.com"; //Replace with your email address
-    $subject        = 'Email sent from delicious mail'; //Subject line for emails
+    $to_Email       = "hello@wejam.xyz"; //Replace with your email address
+    $subject        = 'Email sent from Jam site'; //Subject line for emails
     /*
         EDIT ABOVE
      */
