@@ -6,7 +6,7 @@
     /*
         EDIT BELOW
      */
-    $to_Email       = "hello@wejam.xyz"; //Replace with your email address
+    $to_Email       = "aris@pcuervo.com"; //Replace with your email address
     $subject        = 'Email sent from Jam site'; //Subject line for emails
     /*
         EDIT ABOVE
@@ -34,12 +34,8 @@
         $output = json_encode(array('type'=>'error', 'text' => 'Please enter a valid email!'));
         die($output);
     }
-    if(strlen($user_Message)<5) {
-        $output = json_encode(array('type'=>'error', 'text' => 'Too short message! Please enter something.'));
-        die($output);
-    }
 
-    $sentMail = @mail($to_Email, $subject, $user_Message .'  -'.$user_Name, $headers);
+    $sentMail = @mail($to_Email, $subject, $user_Message, $user_Name, $headers);
    
     if(!$sentMail) {
         $output = json_encode(array('type'=>'error', 'text' => 'Server error, could not send email. Sorry for the inconvenience.'));
