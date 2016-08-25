@@ -6,15 +6,11 @@
     /*
         EDIT BELOW
      */
-    $to_Email       = "aris@pcuervo.com"; //Replace with your email address
+    $to_Email       = "hello@wejam.xyz"; //Replace with your email address
     $subject        = 'Email sent from Jam site'; //Subject line for emails
     /*
         EDIT ABOVE
      */
-
-
-	if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest')
-		die("No direct access.");
 
 	if(!isset($_POST["name"]) || !isset($_POST["email"]) || !isset($_POST["message"])) {
 	    $output = json_encode(array('type'=>'error', 'text' => 'Input fields are empty!'));
@@ -35,7 +31,14 @@
         die($output);
     }
 
-    $sentMail = @mail($to_Email, $subject, $user_Message, $user_Name, $headers);
+    //proceed with PHP email.
+    $headers = "From: $user_Email\n" .
+    "Reply-To: $user_Email\n" .
+    "MIME-Version: 1.0\n" .
+    "Content-Type: text/html\n" .
+    "X-Mailer: PHP/" . phpversion();
+
+    $sentMail = @mail($to_Email, $subject, $user_Message .' <p><strong>Name:</strong></p>'.$user_Name .' <p><strong>Email:</strong></p>'.$user_Email, $headers);
    
     if(!$sentMail) {
         $output = json_encode(array('type'=>'error', 'text' => 'Server error, could not send email. Sorry for the inconvenience.'));

@@ -182,6 +182,9 @@ img {
     .fmshown {
         display: block !important;
     }
+    .padding-content-responsive{
+        padding: 5% 25%;
+    }
 }
 @media only screen 
 and (min-width : 1170px) 
@@ -198,6 +201,9 @@ and (max-width : 1350px)
 
     #screensRightAr {
         right: 20px;
+    }
+    .padding-content-responsive{
+        padding: 5% 25%;
     }
 }
 
@@ -445,6 +451,9 @@ and (max-width : 1170px)
     .fmToggled {
         display: block !important;
     }
+    .padding-content-responsive{
+        padding: 10% 20%;
+    }
 }
 
 @media only screen 
@@ -562,6 +571,9 @@ and (max-width : 767px) {
     .fmToggled {
         display: block !important;
     }
+    .padding-content-responsive{
+        padding: 10% 10%;
+    }
 }
 
 @media only screen 
@@ -579,4 +591,8 @@ and (max-width : 480px)
     #screensRightAr {
         right: 20px;
     }
+    .padding-content-responsive{
+        padding: 10% 5%;
+    }
+
 }
