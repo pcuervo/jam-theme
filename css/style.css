@@ -1117,4 +1117,4 @@ input[type="submit"].btn--secondary {
     margin-bottom: 20px;
 }
 
-.width--100p { width: 100%!important; }
+@media(min-width: 768px){ .width--100p { width: 100%!important; } }

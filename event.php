@@ -6,7 +6,7 @@
     /*
         EDIT BELOW
      */
-    $to_Email       = "nayeli@pcuervo.com"; //Replace with your email address
+    $to_Email       = "hello@wejam.xyz"; //Replace with your email address
     $subject        = 'Email sent from Jam site - Event'; //Subject line for emails
     /*
         EDIT ABOVE
