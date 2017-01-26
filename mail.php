@@ -2,7 +2,7 @@
 	/**
 	 * sends mail submitted from the contact form
 	 */
-    
+
     /*
         EDIT BELOW
      */
@@ -39,7 +39,7 @@
     "X-Mailer: PHP/" . phpversion();
 
     $sentMail = @mail($to_Email, $subject, $user_Message .' <p><strong>Name:</strong></p>'.$user_Name .' <p><strong>Email:</strong></p>'.$user_Email, $headers);
-   
+
     if(!$sentMail) {
         $output = json_encode(array('type'=>'error', 'text' => 'Server error, could not send email. Sorry for the inconvenience.'));
         die($output);

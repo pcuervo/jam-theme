@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	$('form').parsley();
+
 	var top = $("#topContainer");
 	var getApp = $("#getappContainer").offset().top;
 	var contentWrapper = $("#contentWrapper");
@@ -10,7 +12,7 @@ $(document).ready(function(){
 	var revContain = $("#reviewContainer");
 	var resMenuToggle = $("#responsiveMenuToggle");
 	var toTop = $('#toTop');
-	
+
 	//generate responsive menu
 	$( ".mainMenu" ).clone().prependTo( "#followMenu" );
 
@@ -29,12 +31,12 @@ $(document).ready(function(){
 	window.setTimeout(initDelicious, 1000);
 
 	/**
-	 * 
+	 *
 	 * scroll funciton
-	 * 
+	 *
 	 */
 	$(window).scroll(function() {
-		
+
 		var scrollTop = $(window).scrollTop();
 		bgPos = scrollTop * 1.2;
 		$('.textureBgSection').css('background-position', '0px '+bgPos+'px');
@@ -42,7 +44,7 @@ $(document).ready(function(){
 
 	   // Get container scroll position
 	   var fromTop = $(this).scrollTop() + topMenuHeight;
-	   
+
 	   // Get id of current scroll item
 	   var cur = scrollItems.map(function(){
 	     if ($(this).offset().top <= (fromTop+5))
@@ -51,19 +53,19 @@ $(document).ready(function(){
 	   // Get the id of the current element
 	   cur = cur[cur.length-1];
 	   var id = cur && cur.length ? cur[0].id : "";
-	   
+
 	   if (lastId !== id) {
 	       lastId = id;
 	       // Set/remove active class
 	       menuItems
 	         .parent().removeClass("menuActive")
 	         .end().filter("[href=#"+id+"]").parent().addClass("menuActive");
-	   }      
+	   }
 
 		if (headerHeight !== 0 && ($(window).scrollTop()+50) > headerHeight) {
 			if (!folMenu.hasClass("fmshown")) {
 				folMenu.addClass("fmshown");
-				//folMenu.stop().fadeIn(300); 
+				//folMenu.stop().fadeIn(300);
 			}
 
 		}
@@ -73,7 +75,7 @@ $(document).ready(function(){
 				//folMenu.stop().fadeOut(300);
 			}
 		}
-		
+
 		if( scrollTop  > 100 ) {
 			toTop.addClass('visible');
 		} else {
@@ -81,7 +83,7 @@ $(document).ready(function(){
 		}
 
 	});
-	
+
 	toTop.click( function(e) {
 		e.preventDefault();
 		 $('html,body').animate({
@@ -97,7 +99,7 @@ $(document).ready(function(){
      $('html,body').animate({
          scrollTop: ($(target).offset().top - topMenuHeight)
     }, 800);
-    
+
     // Collapse the mobile menu
     collapse_mobile_menu();
 	});
@@ -172,13 +174,13 @@ $(document).ready(function(){
     $btns = null;
 
 	/**
-	 * 
+	 *
 	 * screens config
-	 * 
+	 *
 	 */
 	var scrnItem = $("#screensWrap .filtered"),
 		arrowRight = $("#screensRightAr"),
-		arrowLeft = $("#screensLeftAr"), 
+		arrowLeft = $("#screensLeftAr"),
 		nrOfSlides = 0,
 		currSlide = 1;
 
@@ -262,9 +264,9 @@ $(document).ready(function(){
 			$("#demoStyle").addClass('demoStyleActive')
 	});
 	/**
-	 * 
+	 *
 	 * reconfigure screens on filter
-	 * 
+	 *
 	 */
 	$grid.on('filter.shuffle', function() {
 
@@ -272,7 +274,7 @@ $(document).ready(function(){
 
 	});
 
-	$grid.on('filtered.shuffle', function() { 
+	$grid.on('filtered.shuffle', function() {
 	    currSlide = 1;
 
 		$("#screensWrapOuter").css({
@@ -325,7 +327,7 @@ $(document).ready(function(){
 
 	/**
 	 * responsive menu show on click
-	 * 
+	 *
 	 */
 	function expand_mobile_menu() {
 		folMenu.addClass('active');
@@ -344,9 +346,9 @@ $(document).ready(function(){
 	});
 
 	/**
-	 * 
+	 *
 	 * change styles on resize
-	 * 
+	 *
 	 */
 	function resizedw() {
 		initDelicious();
@@ -414,9 +416,9 @@ $(document).ready(function(){
 	};
 
 	/**
-	 * 
+	 *
 	 * set header slider dimensions and stuff
-	 * 
+	 *
 	 */
 	function initDelicious() {
 		headerHeight = top.height();
@@ -431,9 +433,9 @@ $(document).ready(function(){
 	}
 
 	/**
-	 * 
+	 *
 	 * contact form submit
-	 * 
+	 *
 	 */
 	$( "#sendmail" ).on( "submit", function( event ) {
 		event.preventDefault();
@@ -453,6 +455,29 @@ $(document).ready(function(){
 				else {
 					$("#formSubmitMessage").html('<span style="color: #40A6A6;"><i class="fa fa-check-circle"></i> ' + rpl.text + '</span>');
 					$("#sendmail").slideUp();
+				}
+			}
+		});
+	});
+
+		$( "#event" ).on( "submit", function( event ) {
+		event.preventDefault();
+		$(".fa-form-wait").css('display', 'inline-block');
+
+		$.ajax( {
+			type: "POST",
+			url: $( "#event" ).attr( 'action' ),
+			data: $( "#event" ).serialize(),
+			success: function( response ) {
+				var rpl = JSON.parse(response);
+
+				$(".fa-form-wait").css('display', 'none');
+
+				if (rpl.type == "error")
+					$("#formSubmitMessage").html('<span style="color: #AA0000;"><i class="fa fa-exclamation-circle"></i> ' + rpl.text + '</span>');
+				else {
+					$("#formSubmitMessage").html('<span style="color: #40A6A6;"><i class="fa fa-check-circle"></i> ' + rpl.text + '</span>');
+					$("#event").slideUp();
 				}
 			}
 		});

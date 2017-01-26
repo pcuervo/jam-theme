@@ -1,5 +1,5 @@
 /**
- * * * * * * * * * * * * * * * * * * * * *  
+ * * * * * * * * * * * * * * * * * * * * *
  * * DELICIOUS THEME STYLESHEET* * * * * *
  * * TABLE OF CONTENTS * * * * * * * * * *
  * * * * * * * * * * * * * * * * * * * * *
@@ -10,7 +10,7 @@
  * 4. SECTION TYPO & DETAILS
  * 5. SEPARATORS AND TRIANGLES
  * 6. ICON COLUMNS
- * 7. BUTTONS             
+ * 7. BUTTONS
  * 8. REVIEWS
  * 9. SCREENS
  * 10. DEMO
@@ -26,10 +26,10 @@
 
 /**
  *
- * 
+ *
  * 1. CSS RESET
  *
- * 
+ *
  */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -143,10 +143,10 @@ p {
 
 /**
  *
- * 
+ *
  * 2. HEADER SECTION (menu&slider)
  *
- * 
+ *
  */
 #topContainer {
     width: 100%;
@@ -218,7 +218,7 @@ p {
 #followMenu {
     width: 100%;
     position: fixed;
-    background: #f7f7f7; 
+    background: #f7f7f7;
     background-size: cover;
     padding: 30px 0;
     z-index: 20;
@@ -293,10 +293,10 @@ p {
 
 /**
  *
- * 
+ *
  * 3. GENERAL SECTION STYLES
  *
- * 
+ *
  */
 .section-80-130 {
     padding: 80px 0 130px;
@@ -311,7 +311,7 @@ p {
 }
 
 .section-160-30 {
-    padding: 160px 0 30px;    
+    padding: 160px 0 30px;
 }
 
 .whiteBgSection {
@@ -327,18 +327,18 @@ p {
 .textureBgSection {
     position: relative;
     /*background-attachment:fixed;*/
-    background-size: cover; 
-    background-color: #fff; 
-    background-position: 0 0; 
+    background-size: cover;
+    background-color: #fff;
+    background-position: 0 0;
 }
 
 
 /**
  *
- * 
+ *
  * 4. SECTION TYPO & DETAILS
  *
- * 
+ *
  */
 .sectionTitle, .sectionDescription{
     text-align: center;
@@ -386,10 +386,10 @@ p {
 
 /**
  *
- * 
+ *
  * 5. SEPARATORS AND TRIANGLES
  *
- * 
+ *
  */
 .separator80 {
     height: 80px;
@@ -408,8 +408,8 @@ p {
     top: -160px;
     width: 100%;
     height: 160px;
-    display: block;  
-    z-index: 99; 
+    display: block;
+    z-index: 99;
 }
 
 .triangleBottom {
@@ -421,13 +421,14 @@ p {
     z-index: 99;
 }
 
-
+.top--0 { top: 0px; }
+.bottom--0 { bottom: 0px; }
 /**
  *
  * 6. ICON COLUMNS
- * 
+ *
  */
-/*center icon col*/ 
+/*center icon col*/
 .iconColWrap {
     text-align: center;
 }
@@ -476,7 +477,7 @@ p {
     line-height: 22px;
 }
 
-/*right icon col*/ 
+/*right icon col*/
 .iconRightColWrap {
     transform: translate(0, 0) translate3d(0px, 0px, 0px);
     -webkit-transform: translate(0, 0) translate3d(0px, 0px, 0px);
@@ -540,7 +541,7 @@ p {
     line-height: 22px;
 }
 
-/*left icon col*/ 
+/*left icon col*/
 .iconLeftColWrap {
     transform: translate(0, 0) translate3d(0px, 0px, 0px);
     -webkit-transform: translate(0, 0) translate3d(0px, 0px, 0px);
@@ -606,7 +607,7 @@ p {
 /**
  *
  * 7. BUTTONS
- * 
+ *
  */
 .buttonBig, .dlButton {
     font-size: 18px;
@@ -658,10 +659,10 @@ p {
 
 /**
  *
- * 
+ *
  * 8. REVIEWS
  *
- * 
+ *
  */
 .testWrapper {
     overflow: hidden;
@@ -720,11 +721,11 @@ p {
 
 
 .arrowLeftRev {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    border-right:10px solid #fff; 
+    border-bottom: 10px solid transparent;
+    border-right:10px solid #fff;
     position: absolute;
     left: -10px;
     top: 45px;
@@ -775,10 +776,10 @@ p {
 
 /**
  *
- * 
+ *
  * 9. SCREENS
  *
- * 
+ *
  */
 .screenImg {
     background: #fff;
@@ -848,7 +849,7 @@ button, input[type="submit"] {
     padding: 8px 20px;
     -webkit-border-radius: 45px;
     -moz-border-radius: 45px;
-    border-radius: 45px;   
+    border-radius: 45px;
     font-size: 14px;
     cursor: pointer;
     transition: color 0.3s, background 0.3s, border-color 0.3s;
@@ -871,7 +872,7 @@ button.active, button:hover, input[type="submit"]:hover {
     -moz-border-radius: 50%;
     border-radius: 50%;
     border: 2px solid #cccccc;
-    padding: 5px 15px; 
+    padding: 5px 15px;
     line-height: 32px;
     color: #cccccc;
     transition: color 0.3s, background 0.3s, border-color 0.3s;
@@ -884,7 +885,7 @@ button.active, button:hover, input[type="submit"]:hover {
     cursor: default;
 }
 
-.screensArrowsActive, .screensArrowsActive i { 
+.screensArrowsActive, .screensArrowsActive i {
     cursor: pointer;
     opacity: 1;
 }
@@ -917,13 +918,13 @@ button.active, button:hover, input[type="submit"]:hover {
 
 /**
  *
- * 
+ *
  * 10. DEMO
  *
- * 
+ *
  */
-.embed-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; max-width: 100%; height: auto; } 
-.embed-container iframe, .embed-container object, 
+.embed-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; max-width: 100%; height: auto; }
+.embed-container iframe, .embed-container object,
 .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 .floatingPhone {
@@ -942,10 +943,10 @@ button.active, button:hover, input[type="submit"]:hover {
 
 /**
  *
- * 
+ *
  * 11. FORMS
  *
- * 
+ *
  */
 input:not([type=submit])  {
     width: 85%;
@@ -955,8 +956,8 @@ input:not([type=submit])  {
     border: 2px solid #cccccc;
     -webkit-border-radius: 45px;
     -moz-border-radius: 45px;
-    border-radius: 45px;  
-    color: #666; 
+    border-radius: 45px;
+    color: #666;
     transition: border-color 0.6s;
     -webkit-transition: border-color 0.6s;
 }
@@ -971,7 +972,7 @@ textarea {
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
-    color: #666; 
+    color: #666;
     font-family: 'Roboto', sans-serif;
     transition: border-color 0.6s;
     -webkit-transition: border-color 0.6s;
@@ -989,6 +990,10 @@ input[type="submit"]  {
     margin: 0;
     color: #FF5C00;
     border-color: #FF5C00;
+}
+
+input[type="submit"].btn--secondary {
+    border-color: #fff;
 }
 
 .del-fa {
@@ -1023,15 +1028,15 @@ input[type="submit"]  {
 
 /**
  *
- * 
+ *
  * 12. FOOTER
  *
- * 
+ *
  */
 .footer {
     width: 100%;
     background: url('../img/background.png') no-repeat center;
-    background-size: cover;    
+    background-size: cover;
     text-align: center;
     font-size: 14px;
     color: #fff;
@@ -1040,7 +1045,7 @@ input[type="submit"]  {
 .footer p {
     font-size: 14px;
     color: #fff;
-    line-height: 24px;    
+    line-height: 24px;
 }
 
 .footer i.fa {
@@ -1084,8 +1089,8 @@ input[type="submit"]  {
 	background-color: rgba(0, 0, 0, .1);
 	border-radius: 25px;
 	opacity: 0;
-	-webkit-transition: opacity .25s ease;  
-	transition: opacity .25s ease; 
+	-webkit-transition: opacity .25s ease;
+	transition: opacity .25s ease;
 }
 #toTop.visible {
 	opacity: 1;
@@ -1098,5 +1103,18 @@ input[type="submit"]  {
 .margin-top{ margin-top: 20px;}
 .text-center{ text-align: center; }
 
+#eventContainer #formSubmitMessage {
+    text-align: center;
+    color: #fff!important;
+}
+#eventContainer #formSubmitMessage span { color: #fff!important; }
 
+.parsley-errors-list {
+    list-style-type: none;
+    text-align: center;
+}
+.parsley-errors-list li {
+    margin-bottom: 20px;
+}
 
+.width--100p { width: 100%!important; }
